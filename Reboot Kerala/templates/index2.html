@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+  <html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Portable Early Warning Module</title>
+      <link href = "static/img/logo.png">
+      <link rel="stylesheet" href="static/css/components.css">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link rel="stylesheet" href="static/css/icons.css">
+      <link rel="stylesheet" href="static/css/responsee.css">
+      <link rel="stylesheet" href="static/owl-carousel/owl.carousel.css">
+      <link rel="stylesheet" href="static/owl-carousel/owl.theme.css">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	  <script type="text/javascript" src="static/js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="static/js/jquery-ui.min.js"></script>
+      <style>
+        #map{
+        height:400px;
+        width: 936px;
+        }
+    </style>
+    <style>
+        body{
+        background:red;
+        }
+        .clear{clear:both;}
+        .blink{
+        text-transform: translate(-50%, -50%);
+        }
+        span{
+           font-size: 4em;
+           font-family: Ariel black;
+           text-transform:uppercase;
+           animation:blink 2s linear infinite;
+           color:#fff;
+        }
+        @keyframes blink{
+        0%{opacity:0;}
+        25%{opacity:1;}
+        50%{opacity:0;}
+        75%{opacity:1;}
+        100%{opacity:0;}
+        }
+    </style>
+    <style>
+
+          .overide-style , .overide-style:hover{
+          position:static !important;
+          transform: unset !important;
+          transition: unset !important;
+          pointer-events:none;
+          }
+          .subhd2{height:35px; background:#1f567c; text-align:center; color:white; font-size:25px}
+          </style>
+   </head>
+   <body class="size-960" style="background-color:lightblue">
+      <!-- HEADER -->
+      <div class="header" id="myHeader">
+         <div class="line">
+            <div class="box">
+                <br>
+					<div class="row">
+						<div class="col-sm-2"><center><b><a href="index.html"><img src="static/img/logo.png" style="width:75%;height:75%"></a>
+						Welcome to PEWM</b></center></div>
+						<div class="col-sm-4"><h4>Let us Help you <br><br>Your Safety is our Motto</h4></div>
+						<div class="col-sm-4">
+							<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+							<form action="">
+								<input type="search">
+								<i class="fa fa-search"></i>
+							</form>
+						</div>
+
+					</div>
+			</div>
+         </div>
+         <!-- TOP NAV -->
+         <div class="line">
+            <nav>
+               <p class="nav-text">Custom menu text</p>
+               <div class="top-nav s-12 l-10" style="color:white">
+                  <ul>
+                     <li><a>Home</a></li>
+                     <li>
+                        <a>Sensor Live Data</a>
+                        <ul>
+                            <li><a>Sensor 1</a></li>
+                            <li><a>Sensor 2</a></li>
+                            <li><a>Sensor 3</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a>Authoritarian Links</a>
+                        <ul>
+                           <li><a>Know More</a></li>
+                           <li><a>Location</a></li>
+                        </ul>
+                     </li>
+                      <li><a href="https://rescuemission.org">Emergency Dial</a></li>
+                      <li><a href="static/img/header-1.svg">Contact Us</a></li>
+                  </ul>
+               </div>
+               <div class="hide-s hide-m l-2">
+                  <i class="icon-facebook_circle icon2x right padding"></i>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <div class="line">
+            <nav style="background-color:red;border-top: 4px solid #fff;">
+               <p class="nav-text">Custom menu text</p>
+               <div class="top-nav s-12 l-10" style="color:white">
+                   <form action="url_for{{'home'}}" method="post">
+                   <div align='center' style='background-color:red;height: 50px;text-align: center;font-size: 10px;font-weight: bold;line-height: 50px;' class='blink'><span><font color='white'>{{warn_text}}
+                   </font></span></div></form>
+               </div>
+            </nav>
+          <div class="clear"></div>
+      </div>
+	  <section>
+         <!-- CAROUSEL -->
+         <!--<div class="line">
+            <div id="header-carousel" class="owl-carousel owl-theme margin-bottom">
+               <div class="item"><img src="static/img/RK1.jpg" alt=""></div>
+               <div class="item"><img src="static/img/RK2.jpg" alt=""></div>
+               <div class="item"><img src="static/img/RK3.jpg" alt=""></div>
+            </div>
+         </div> -->
+
+
+         <!-- HOME PAGE BLOCK -->
+         <div class="line">
+            <div class="margin">
+               <div class="s-12 m-6 l-6 margin-bottom">
+                  <div class="box" style="center">
+                     <h2 class="subhd2">LIVE DATA FROM DPMS<br></h2>
+                     <div class="center">
+                        <form action=" url_for{{'home'}}" method="post" class="center overide-style" style="position:static !important; width:100%">
+                            <div style="background-color:white"><font size="6">Vibration Level: {{vibration_text}} sl<br>Water Level: {{water_text}} sl</font> </div>
+                        </form>
+                     </div>
+                     <div class="center" style="padding-top:10px">
+                          <p><i><br><br><font size="5" color="red"><br><a href="https://www.rediff.com/news/report/pix-life-in-keralas-relief-camps/20180822.htm">"Nearby Relief Camps (click here)"</a></font></i><br></p>
+                      </div>
+                  </div>
+               </div>
+
+               <div class="s-12 m-6 l-6 margin-bottom">
+                  <div class="box">
+                     <!-- Weather Widget BEGIN -->
+                     <div class="weather-widget-container">
+                       <div class="weather-widget-container__widget"></div>
+                     <a class="weatherwidget-io" href="https://forecast7.com/en/10d7976d65/palakkad/" data-label_1="PALAKKAD" data-label_2="WEATHER" data-theme="original" >PALAKKAD WEATHER</a>
+                        <script>
+                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+                        if(!d.getElementById(id)){
+                        js=d.createElement(s);
+                        js.id=id;
+                        js.src='https://weatherwidget.io/js/widget.min.js';
+                        fjs.parentNode.insertBefore(js,fjs);
+                        }}(document,'script','weatherwidget-io-js');
+                        </script>
+                     <!-- Weather Widget END -->
+                         <br>
+                     <font size="5"><i>Weather Forecast upto Five Days</i></font>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- ASIDE NAV AND CONTENT -->
+         </div>
+      </section>
+      <section>
+         <!-- Google Map API-->
+         <div id="map" class="center">
+             <script>
+                 function initMap(){
+                 var options = {
+                 zoom:13,
+                 center:{lat:10.7867, lng:76.6548}
+                 }
+                 var map = new google.maps.Map(document.getElementById('map'), options);
+                 var marker = new google.maps.Marker({
+                 position:{lat:10, lng:42},
+                 map:map
+                 });
+                 }
+             </script>
+             <script async defer
+                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCildbMFG_k4joPct_kBF2uoseMBzTct-U&callback=initMap">
+
+             </script>
+         </div>
+
+         <!-- GALLERY CAROUSEL -->
+         <div class="line text-center">
+            <h2 class="margin-bottom">Emergency Contact</h2>
+            <div id="gallery-carousel" class="owl-carousel owl-theme margin-bottom owl-loaded owl-drag">
+                  
+               <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-936px, 0px, 0px); transition: all 0s ease 0s; width: 2106px;"><div class="owl-item cloned" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/vishnu.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div><div class="owl-item cloned" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/vishnu.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div><div class="owl-item active" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/vishnu.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div><div class="owl-item active" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/vishnu.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div><div class="owl-item active" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/p1.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div><div class="owl-item active" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/p1.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div><div class="owl-item active" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/p1.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div><div class="owl-item active" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/p1.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div><div class="owl-item active" style="width: 234px;"><div class="line">
+                     <div class="margin">
+                  <div class="s-12 m-6 l-11 margin-bottom">
+                  <div class="box">
+                     <img src="static/img/p1.jpg" style="width:100%">
+
+        				<h2>Person</h2>
+       					<p class="title">Rapid Response Team</p>
+       					<p>Phone Number</p>
+        				<p><button class="button">View</button></p>
+
+                  </div>
+                  </div>
+                  </div>
+              </div></div></div></div><div class="owl-nav"><div class="owl-prev"></div><div class="owl-next"></div></div><div class="owl-dots disabled"><div class="owl-dot active"><span></span></div></div></div>
+            </div>
+      </section>
+      <!-- FOOTER -->
+      <footer class="line">
+         <div class="box">
+            <div class="s-12 l-6">
+               <p>Copyright 2020, Vision_design - "Solver-E"</p>
+            </div>
+            <div class="s-12 l-6">
+               <a class="right" href="http://www.myresponsee.com/" title="Responsee - lightweight responsive framework"><i>Design and coding by Solver-E</i></a>
+            </div>
+         </div>
+      </footer>
+      <script type="text/javascript" src="static/js/responsee.js"></script>
+      <script type="text/javascript" src="static/js/owl.carousel.js"></script>
+
+      <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          var owl = $('#header-carousel');
+          owl.owlCarousel({
+            nav: true,
+            dots: true,
+            items: 1,
+            loop: true,
+            navText: ["&#xf007","&#xf006"],
+            autoplay: true,
+            autoplayTimeout: 3000
+          });
+          var owl = $('#gallery-carousel');
+          owl.owlCarousel({
+            nav: false,
+            dots: true,
+            loop: true,
+            navText: ["&#xf007","&#xf006"],
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsive: {
+              0: {
+                items: 1
+              },
+              769: {
+                items: 2
+              },
+              960: {
+                items: 4
+              }
+            }
+          });
+        })
+      </script>
+   
+</body>
+</html>
