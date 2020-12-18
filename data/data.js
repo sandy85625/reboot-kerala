@@ -20,17 +20,15 @@ let consumption = [];
 Papa.parse(file, {
     worker: true, // Don't bog down the main thread if its a big file
     step: function(result) {
-
         // The preprocessed data is given by 'var data'
         var Data = result.data;
         date = Data[0];
         consumption = Data[1];
-        console.log(Data[0])
+        return { date: date, consumption: consumption }
     },
 
     complete: function(results, file) {
-        console.log('parsing complete read', count, 'records.'); 
+        console.log('Parsing complete read', consumption[-1], 'records.'); 
     },
-  
-  
+    
 });

@@ -474,7 +474,7 @@ a {
 .card__main {
   position: relative;
   padding-right: 20px;
-  background-color: #FFF;
+  background-color: rgb(255, 255, 255);
   height: 620px;
 }
 .card__main:after {

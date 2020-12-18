@@ -5,7 +5,7 @@ const passport = require('passport');
 
 // view for home page
 routers.get('/', passport.checkSessionPresent ,function (req, res) {
-    return res.render('home.ejs');
+    return res.render('index.html');
 })
 
 // view for sign in page
