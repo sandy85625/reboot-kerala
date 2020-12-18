@@ -1,0 +1,28 @@
+
+
+<h1>Register yourself</h1>
+
+
+<form action="/auth/signup" method="post" class="form-group">
+    <div class="form-group" >
+        <small class="form-text text-muted"> Use Your Email Address To Register</small>
+        <input type="text" name="name" id="" placeholder="Enter your first name" required><br>
+        <br>
+
+        <input type="text" name="email" id="" placeholder="Enter your email" required>
+        <br><br>
+        <input type="password" name="password" id="" placeholder="Enter a password" required>
+        <br><br>
+        <input type="password" name="repassword" id="" placeholder="Renter your password" required>
+    </div>
+    <button type="submit" class="btn btn-in btn-dark btn-lg"> Register </button>
+</form>
+
+<br>
+
+<a href="/auth/google" class="btn btn-dark btn-lg btn-social"> 
+    <i class="fab fa-google"></i>
+    Sign Up Using Google
+</a>
+
+<a href="/signin" > Already have an account <i class="fas fa-arrow-right"></i> </a>

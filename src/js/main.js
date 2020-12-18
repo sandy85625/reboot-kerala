@@ -57,40 +57,103 @@ $(document).ready(() => {
   }
   
   // Draw the chart
+  function onClickDisplaySMA(){
+    $("#btn_draw_sma").hide();
+    $("#load_draw_sma").show();
+    $("#div_container_sma").show();
+  
+    window_size = parseInt(document.getElementById("input_windowsize").value);
+  
+    sma_vec = ComputeSMA(data_raw, window_size);
+  
+    let sma = sma_vec.map(function (val) { return val['avg']; });
+    let prices = data_raw.map(function (val) { return val['price']; });
+  
+    let timestamps_a = data_raw.map(function (val) { return val['timestamp']; });
+    let timestamps_b = data_raw.map(function (val) {
+      return val['timestamp'];
+    }).splice(window_size, data_raw.length);
+  
+    let graph_plot = document.getElementById('div_linegraph_sma');
+    Plotly.newPlot( graph_plot, [{ x: timestamps_a, y: prices, name: "Stock Price" }], { margin: { t: 0 } } );
+    Plotly.plot( graph_plot, [{ x: timestamps_b, y: sma, name: "SMA" }], { margin: { t: 0 } } );
+  
+    $("#div_linegraph_sma_title").text("Stock Price and Simple Moving Average (window: " + window_size + ")" );
+    $("#btn_draw_sma").show();
+    $("#load_draw_sma").hide();
+  
+    $("#div_container_train").show();
+    $("#div_container_trainfirst").hide();
+  
+    displayTrainingData();
+  }
+
+  function displayTrainingData(){
+    $("#div_container_trainingdata").show();
+  
+    let set = sma_vec.map(function (val) { return val['set']; });
+    let data_output = "";
+    for (let index = 0; index < 25; index++)
+    {
+       data_output += "<tr><td width=\"20px\">" + (index + 1) +
+        "</td><td>[" + set[index].map(function (val) {
+          return (Math.round(val['price'] * 10000) / 10000).toString();
+        }).toString() +
+        "]</td><td>" + sma_vec[index]['avg'] + "</td></tr>";
+    }
+  
+    data_output = "<table class='striped'>" +
+    "<thead><tr><th scope='col'>#</th>" +
+    "<th scope='col'>Input (X)</th>" +
+    "<th scope='col'>Label (Y)</th></thead>" +
+    "<tbody>" + data_output + "</tbody>" +
+    "</table>";
+  
+    $("#div_trainingdata").html(
+      data_output
+    );
+  }
+
   function renderChart() {
     const chart = AmCharts.makeChart( "chartdiv", {
       "type": "serial",
       "theme": "light",
       "dataProvider": [ {
         "month": "Jan",
-        "visits": 2025
+        "visits": 508
       }, {
         "month": "Feb",
-        "visits": 1882
-      }, {
-        "month": "Mar",
-        "visits": 1809
-      }, {
-        "month": "Apr",
-        "visits": 1322
-      }, {
-        "month": "May",
-        "visits": 1122
-      }, {
-        "month": "Jun",
-        "visits": 1114
-      }, {
-        "month": "Jul",
-        "visits": 984
-      }, {
-        "month": "Aug",
-        "visits": 711
-      }, {
-        "month": "Sept",
         "visits": 665
       }, {
+        "month": "Mar",
+        "visits": 711
+      }, {
+        "month": "Apr",
+        "visits": 974
+      }, {
+        "month": "May",
+        "visits": 1114
+      }, {
+        "month": "Jun",
+        "visits": 1122
+      }, {
+        "month": "Jul",
+        "visits": 1322
+      }, {
+        "month": "Aug",
+        "visits": 1809
+      }, {
+        "month": "Sept",
+        "visits": 1882
+      }, {
         "month": "Oct",
-        "visits": 580
+        "visits": 2025
+      },{
+        "month": "Nov",
+        "visits": 2685
+      }, {
+        "month": "Dec",
+        "visits": 3493
       } ],
       "valueAxes": [ {
         "gridColor": "#FFFFFF",

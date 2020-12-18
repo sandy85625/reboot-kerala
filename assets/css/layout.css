@@ -1,0 +1,26 @@
+body {
+  display: grid;
+  place-items: center;
+}
+
+.container-body {
+  background-color: rbg(236 238 239);
+  display: grid;
+  place-items: center;
+  width: 867px;
+  height: 503px;
+}
+
+.btn-social {
+  width: 280px;
+}
+
+.form-group input {
+  width: 364px;
+  height: 46px;
+  font-size: x-large;
+}
+
+.btn-in {
+  width: 95px;
+}

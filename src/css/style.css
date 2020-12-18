@@ -398,6 +398,7 @@ a {
   background-color: #FFF;
   transform: translateY(0);
   transition: all 0.3s;
+  border-radius: 5px;
 }
 .overviewCard-icon {
   display: flex;
@@ -448,6 +449,7 @@ a {
   background-color: #fff;
   margin-bottom: 20px;
   -webkit-column-break-inside: avoid;
+  border-radius: 5px;
 }
 .card__header {
   display: flex;
@@ -456,6 +458,7 @@ a {
   height: 50px;
   background-color: #0e72f5;
   color: #FFF;
+  border-radius: 5px 5px 0px 0px;
 }
 .card__header-title {
   margin: 0 20px;
@@ -472,6 +475,7 @@ a {
   position: relative;
   padding-right: 20px;
   background-color: #FFF;
+  height: 620px;
 }
 .card__main:after {
   content: "";
@@ -641,6 +645,10 @@ a {
   height: 300px;
   font-size: 11px;
   min-width: 0;
+}
+
+.map{
+  margin: 1%;
 }
 
 .footer {

@@ -1,0 +1,54 @@
+.
+├── app.js
+├── assets
+│   ├── css
+│   │   └── layout.css
+│   ├── imgs
+│   │   ├── S1.png
+│   │   ├── S2.png
+│   │   ├── S3.png
+│   │   ├── S4.png
+│   │   └── S5.png
+│   └── scss
+│       └── layout.scss
+├── config
+│   ├── mongoose.js
+│   ├── passport-google.js
+│   └── passport-local.js
+├── controllers
+│   └── auth_controllers.js
+├── data
+│   ├── data.csv
+│   ├── data.js
+│   ├── model.js
+│   └── nn
+│       ├── index.js
+│       └── model.js
+├── folder_structure.txt
+├── index.html
+├── models
+│   └── User.js
+├── package.json
+├── package-lock.json
+├── README.md
+├── routers
+│   ├── authentication.js
+│   └── user.js
+├── server.js
+├── src
+│   ├── css
+│   │   ├── icon.png
+│   │   ├── style.css
+│   │   ├── style.css.map
+│   │   └── style.scss
+│   └── js
+│       └── main.js
+└── views
+    ├── home.ejs
+    ├── layout.ejs
+    ├── reset.ejs
+    ├── signin.ejs
+    ├── signup.ejs
+    └── user.ejs
+
+14 directories, 37 files
