@@ -25,12 +25,14 @@ Use Node Package Manager (npm) to unpack and install the dependecies:
 
 Start the Development Server for frontend only, use the following command:
 `npm test`
+
 ---
 
 For running with the backend, Please provide MongoDB Key and 0Auth Keys at ./key.js, then:
 `npm start`
 
-If you face any issues:
+If you face any issues: Please report it to https://github.com/sandy85625/reboot-kerala.git/issues
+
 please create a new key.js file at root folder and copy paste this code:
 ```
 // ------------ Keys ------------- //
