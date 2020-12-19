@@ -73,6 +73,6 @@ More on Docker at: https://www.docker.com/get-started
 
 ---
 
-To understand more on node.js and npm, please refer:   
-
-More on Git and Github at:   
+To understand more on node.js and npm, please refer: https://nodejs.org/en/docs/guides/getting-started-guide/   
+More on Git and Github at: https://guides.github.com/activities/hello-world/
+More on MongoDB: https://docs.mongodb.com/manual/tutorial/getting-started/  
