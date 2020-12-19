@@ -12,7 +12,7 @@ The stability and connection of smart grids and conventional grid which is an
 important task. We use machine learning for the forecasting which uses RNN netwroks
 for Time-Series prediction.
 
-#### For Development
+### For Development
 
 Clone the Github repository to your local system:  
 `git clone https://github.com/sandy85625/reboot-kerala.git`
@@ -61,7 +61,7 @@ module.exports = {
 Voila! Now your development server will be running at https://127.0.0.1:8000/
 
 ---
-#### Docker Container build
+### Docker Container build
 
 Docker build for production:  
 `docker build -t reboot-kerala .`
