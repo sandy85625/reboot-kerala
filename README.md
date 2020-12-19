@@ -1,4 +1,4 @@
-# Dyuthi | Energy Management Console
+# Dyuthi | Energy Management Console V1.0.0
 
 Dyuthi is a Energy Management Console where it is used to represent 
 the data from the Dyuthi module to the consumers directly. The integration 
@@ -27,6 +27,9 @@ Start the Development Server for frontend only, use the following command:
 `npm test`
 
 ---
+Docker build for production:
+`docker build -t reboot-kerala .`
+
 
 For running with the backend, Please provide MongoDB Key and 0Auth Keys at ./key.js, then:
 `npm start`
@@ -64,4 +67,5 @@ Voila! Now your development server will be running at `https://127.0.0.1:8000/`
 
 
 To understand more on node.js and npm, please refer: 
+
 More on Git and Github at: 
