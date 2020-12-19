@@ -23,7 +23,7 @@ Go inside to the directory:
 Use Node Package Manager (npm) to unpack and install the dependecies:  
 `npm install`
 
-Start the Development Server for frontend only, use the following command: 
+Start the Development Server for frontend only, use the following command:  
 `npm test`
 
 ---
