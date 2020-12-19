@@ -31,8 +31,7 @@ Start the Development Server for frontend only, use the following command:
 For running with the backend, Please provide MongoDB Key and 0Auth Keys at ./key.js, then:
 `npm start`
 
-If you face any issues: Please report it to https://github.com/sandy85625/reboot-kerala.git/issues
-
+If you face any issues:
 please create a new key.js file at root folder and copy paste this code:
 ```
 // ------------ Keys ------------- //
