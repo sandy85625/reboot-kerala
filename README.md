@@ -26,11 +26,6 @@ Use Node Package Manager (npm) to unpack and install the dependecies:
 Start the Development Server for frontend only, use the following command:  
 `npm test`
 
----
-Docker build for production:  
-`docker build -t reboot-kerala .`
-
-
 For running with the backend, Please provide MongoDB Key and 0Auth Keys at ./key.js, then:  
 `npm start`
 
@@ -65,6 +60,16 @@ module.exports = {
 
 Voila! Now your development server will be running at https://127.0.0.1:8000/
 
+---
+Docker build for production:  
+`docker build -t reboot-kerala .`
+
+Docker is a software container service that is very useful in deploying the  
+software without any hardware dependency.
+
+More on Docker at: https://www.docker.com/get-started
+
+---
 
 To understand more on node.js and npm, please refer:   
 
