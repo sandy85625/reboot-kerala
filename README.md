@@ -14,24 +14,24 @@ for Time-Series prediction.
 
 #### For Development
 
-Clone the Github repository to your local system:
+Clone the Github repository to your local system:  
 `git clone https://github.com/sandy85625/reboot-kerala.git`
 
-Go inside to the directory:
+Go inside to the directory:  
 `cd reboot-kerala`
 
-Use Node Package Manager (npm) to unpack and install the dependecies:
+Use Node Package Manager (npm) to unpack and install the dependecies:  
 `npm install`
 
-Start the Development Server for frontend only, use the following command:
+Start the Development Server for frontend only, use the following command: 
 `npm test`
 
 ---
-Docker build for production:
+Docker build for production:  
 `docker build -t reboot-kerala .`
 
 
-For running with the backend, Please provide MongoDB Key and 0Auth Keys at ./key.js, then:
+For running with the backend, Please provide MongoDB Key and 0Auth Keys at ./key.js, then:  
 `npm start`
 
 If you face any issues:
@@ -63,9 +63,9 @@ module.exports = {
 }
 ``` 
 
-Voila! Now your development server will be running at `https://127.0.0.1:8000/`
+Voila! Now your development server will be running at https://127.0.0.1:8000/
 
 
-To understand more on node.js and npm, please refer: 
+To understand more on node.js and npm, please refer:   
 
-More on Git and Github at: 
+More on Git and Github at:   
